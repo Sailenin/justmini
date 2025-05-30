@@ -1,0 +1,91 @@
+/* Navbar styles with full width, no rounded ends, and animations */
+.navbar {
+    background: linear-gradient(135deg, #00bbff, #8659db); /* Gradient background */
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow effect */
+    position: relative;
+    z-index: 10;
+    width: 100%; /* Full width navbar */
+    animation: navbarAnimation 1s ease-out;
+    height: 70px; /* Fixed height for the navbar */
+  }
+  
+  /* Logo Styles */
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar .logo:hover {
+    color: #f33b85;
+    transform: scale(1.1);
+  }
+  
+  /* Links container */
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Nav Link Styles */
+  .nav-link {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 50%; /* Circular effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px; /* Ensures circular shape is consistent */
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0); /* Removed transparency */
+  }
+  
+  .nav-link:hover {
+    color: #f33b85;
+    background: radial-gradient(circle, rgba(243, 59, 133, 0.6), rgba(243, 59, 133, 0)); /* Gradient background */
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(243, 59, 133, 0.5); /* Glow effect */
+  }
+  
+  .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #f33b85;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Animation for Navbar appearance */
+  @keyframes navbarAnimation {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

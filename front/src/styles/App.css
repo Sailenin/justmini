@@ -1,0 +1,60 @@
+/* Center app content */
+.App {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1f26;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Logo animation and responsiveness */
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Header styling */
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  font-size: calc(1rem + 2vmin);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Link styling */
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #21a1f1;
+}
+
+/* Logo spin animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
